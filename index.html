@@ -69,6 +69,12 @@
       align-items: center;
   }
 
+  .search {
+      text-align: center;
+      width: 100%;
+      margin-top: 1%;
+  }
+
   .modal-icons {
       height: 50px;
       width: 100%;
@@ -99,26 +105,36 @@
       z-index: 1;
   }
 
-  .flex-container {
-      display: flex;
-      justify-content: space-between;
-      padding: 10px 22px;
-  }
+  .styled {
+    border: 0;
+    line-height: 2.5;
+    padding: 0 100px;
+    width: 40%;
+    height: 100px;
+    margin-left: 5%;
+    margin-top: 1%;
+    font-size: x-large;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 10px;
+    background-color: rgba(220, 0, 0, 1);
+    background-image: linear-gradient(to top left,
+                                      rgba(0, 0, 0, .2),
+                                      rgba(0, 0, 0, .2) 30%,
+                                      rgba(0, 0, 0, 0));
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+                inset -2px -2px 3px rgba(0, 0, 0, .6);
+}
 
-  .flex {
-      opacity: 1;
-      transition: opacity 0.2s ease-in-out;
-      width: 120px;
-  }
+.styled:hover {
+    background-color: rgba(255, 0, 0, 1);
+}
 
-  .flex:hover {
-      opacity: 0.4;
-  }
-
-  .flex .fa {
-      font-size: 40px;
-      color: #2f5876;
-  }
+.styled:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+                inset 2px 2px 3px rgba(0, 0, 0, .6);
+}
 
 
 
@@ -137,11 +153,32 @@
     <div class="modal-header">
       <h1>Select the category of your item or type it in the search bar!</h1>
     </div>
+    <div class="search">
+        <input type="text" placeholder="Search..">
+    </div>
+    <div>
+        <button class="favorite styled" type="button">
+            Dairy
+        </button>
+        <button class="favorite styled" type="button">
+            Meat
+        </button>
+        <button class="favorite styled" type="button">
+            Ice Cream
+        </button>
+        <button class="favorite styled" type="button">
+            Pasta
+        </button>
+        
+    </div>
+
+    
 
 
     </form>
     </div>
     </div>
+
 
 </body>
 </html>
